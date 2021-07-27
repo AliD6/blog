@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}" type="text/css">
+    <title>UT event</title>
+</head>
+
+<body>
+
+    <div id="main">
+        <div id="header">
+            <div id="sitename">
+                <h1> <a href="#">UT event</a></h1>
+            </div>
+            <!--sitename-->
+            <div id="logo"></div>
+            <!--logo-->
+        </div>
+        <!--header-->
+        <div id="linkbar">
+            <ul>
+            {% for category in category_data %}
+                <li><a href="basij.html"> {{  category.name  }} </a></li>
+                {% comment %} <li><a href="#"> انجمن اسلامی </a></li> {% endcomment %}
+            {% endfor %}
+
+            </ul>
+        </div>
+        <!--linkbar-->
+        
+        <div class="content">
+        {% for category in category_data %} 
+
+            <div class="org" style="margin-left:10px;margin-top:5px;background-color:{{category.post_color}}">
+                <div class="orgtitle"  style="background-color:{{category.color}}">
+                    <img src="{{ category.cover }}" alt="{{ category.name }}">
+                    <h3><a href="basij.html"> {{ category.name }} </a></h3>
+                </div>
+                {% comment %} <button onclick="fun()"></button> {% endcomment %}
+                
+                {% for post in post_data %}
+                {% if post.category.name == category.name %}
+                <div>
+               <h2 style="direction:rtl;">{{ post.title}}<br></h2>
+                <img src="{{post.cover}}" style="height:200px;width:200px;"><br>
+                
+                <div style="direction:rtl;">{{post.description}}</div>
+                </div>
+                {{ "<!--" }}
+                {% endif %}
+                {% endfor %}
+                {{ "-->" }}
+
+
+            </div>
+            {% comment %} we want to add posts {% endcomment %}
+          
+        {% endfor %}
+
+        </div>
+        <!--content-->
+       
+        <div id="column">
+         {% for category in category_data %}
+            <ul>
+                <li><a href="#">{{ category.name }}</a></li>
+
+            </ul>
+         {% endfor %}   
+        </div>
+        
+        <!--column-->
+        {% comment %} <div id="column2"></div> {% endcomment %}
+        <!--column-->
+
+
+        <div id="footer"></div>
+        <!--footer-->
+    </div>
+    <!--main-->
+
+</body>
+
+
+
+<script src="scripts/script.js"></script>
+</html>

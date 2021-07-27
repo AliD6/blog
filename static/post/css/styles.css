@@ -1,0 +1,189 @@
+body {
+    background-image: url(../images/main.jpg);
+}
+
+#main {
+    width: 960px;
+    min-height: 1000;
+    margin: auto;
+}
+
+#header {
+    width: 960px;
+    height: 200px;
+    background-color: bisque;
+}
+
+#sitename {
+    width: 200px;
+    height: 100px;
+    background-color: ivory;
+    float: left;
+    margin: 20px;
+    text-align: center;
+    font-family: monospace;
+}
+
+#sitename a {
+    color: rgb(7, 7, 6);
+    text-decoration: none;
+}
+
+#logo {
+    float: right;
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    background-color: lawngreen;
+}
+
+#linkbar {
+    float: left;
+    width: 960px;
+    height: 50px;
+    background-color: lightcoral;
+    margin-top: 5px;
+    text-align: right;
+}
+
+#linkbar li {display: inline;direction: ltr;margin: 10px;}
+#linkbar a {text-decoration: none;font-size: 20px;color: lightcyan;}
+#linkbar a:hover {color: black;background-color: blanchedalmond;}
+
+.content {
+    width: 720px;
+    float: left;
+    min-height: 1000px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.org{
+    float: left;
+    width: 350px;
+    min-height: 450px;
+    border-radius: 10px;
+}
+
+.orgtitle {
+    height: 50px;
+    width: 350px;
+    float: left;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.orgtitle img {
+    height: 46px;
+    width: 46px;
+    border-radius: 40px;
+    margin-top: 2px;
+    margin-left: 2px;
+}
+
+.orgtitle h3 {
+    float: right;
+    margin-right: 20px;
+    margin-top: 12px;
+    font-size: 20px;
+}
+
+.orgtitle a {
+    text-decoration: none;
+    color: ivory;
+}
+
+#column {
+    float: right;
+    width: 200px;
+    min-height: 500px;
+    border-radius: 10px;
+    background-color: darkgrey;
+    margin: 10px;
+    font-size: 12px;
+    direction: rtl;
+}
+
+#column ul {
+    list-style-type: none;
+    padding-inline-start: 20px;
+}
+
+#column ul li:before {
+    content: "\25C0 \0020";
+    font-size: 9px;
+}
+
+#column a {
+    text-decoration: none;
+    color: black;
+}
+
+#column2 {
+    float: right;
+    width: 200px;
+    min-height: 500px;
+    border-radius: 10px;
+    background-color: darkgrey;
+    margin: 10px;
+}
+
+#footer {
+    width: 960px;
+    height: 200px;
+    background-color: rgb(98, 182, 182);
+    float: left;
+    margin-bottom: 10px;
+}
+
+.orgmain {
+    height: 100px;
+    width: 720px;
+    margin: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.orgmain img {
+    height: 94px;
+    width: 94px;
+    border-radius: 40px;
+    margin: 2px;
+    float: right;
+}
+
+.orgmain h3 {
+    float: right;
+    margin-right: 20px;
+    margin-top: 35px;
+    font-size: 20px;
+}
+
+.orgmain a {
+    text-decoration: none;
+    color: ivory;
+}
+.basij-color{
+    background-color: rgb(184, 240, 237);
+}
+.anjoman-color{
+    background-color: cornsilk;
+}
+.edalat-color{
+    background-color: rgb(184, 240, 237);
+}
+.mostaghel-color{
+    background-color: cornsilk;
+}
+.basij-title-color{
+    background-color: aquamarine;
+}
+.anjoman-title-color{
+    background-color: blue;
+}
+.edalat-title-color{
+    background-color: cornflowerblue;
+}
+.mostaghel-title-color{
+    background-color: darkgreen;
+}
