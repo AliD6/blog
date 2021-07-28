@@ -4,6 +4,7 @@ from . import views
 
 urlpatterns = [
     # path('', TemplateView.as_view(template_name="index.html")),
-    path('' , views.indexpage.as_view() )#, name = indexpage)
+    path('' , views.indexpage.as_view() ),#, name = indexpage),
+    path('map/' , views.Mappage.as_view() ),
 
 ]

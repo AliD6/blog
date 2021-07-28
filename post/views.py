@@ -46,3 +46,6 @@ class indexpage(TemplateView):
          #  print(context)
         return render(request , 'index.html' , context)
 
+class Mappage(TemplateView):
+    def get(self, request, *args, **kwargs) :
+        return render(request , 'map.html')
