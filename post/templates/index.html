@@ -6,6 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'styles/styles.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'styles/map.css'%}" type="text/css">
+    <style>
+      .map {
+        height: 300px;
+        width: 300px;
+        margin : 10px;
+      }
+    </style>
     <title>UT event</title>
 </head>
 
@@ -38,10 +46,7 @@
             <div class="org" style="margin-left:10px;margin-top:5px;background-color:{{category.post_color}}">
                 <div class="orgtitle"  style="background-color:{{category.color}}">
                     {% comment %} <img src="{{ category.cover }}" alt="{{ category.name }}"> {% endcomment %}
-                    {% block map%}
-
-
-                    {% endblock }
+                    
                     <h3><a href="basij.html"> {{ category.name }} </a></h3>
                  </div>
                  {% comment %} <button onclick="fun()"></button> {% endcomment %}
@@ -50,12 +55,15 @@
                      {% if post.category.name == category.name %}
                       <div>
                          <h2 style="direction:rtl;">{{ post.title}}<br></h2>
-                         <img src="{{post.cover}}" style="height:200px;width:200px;"><br>
+                         {% comment %} <img src="{{post.cover}}" style="height:200px;width:200px;"><br> {% endcomment %}
+                         <div id="map" class="map"></div>
                 
                          <div style="direction:rtl;">{{post.description}}</div>
+                         
                      </div>
                      {{ "<!--" }}
                      {% endif %}
+                     
                  {% endfor %}
                  {{ "-->" }}
 
@@ -90,6 +98,7 @@
 </body>
 
 
-
-<script src="scripts/script.js"></script>
+<script src="{% static 'scripts/map2.js' %}"></script>
+{% comment %} <script src="{% static 'scripts/script.js' %}"></script> {% endcomment %}
+<script type="text/javascript" src="{% static 'scripts/map.js' %}"></script>
 </html>
