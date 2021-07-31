@@ -37,23 +37,27 @@
 
             <div class="org" style="margin-left:10px;margin-top:5px;background-color:{{category.post_color}}">
                 <div class="orgtitle"  style="background-color:{{category.color}}">
-                    <img src="{{ category.cover }}" alt="{{ category.name }}">
+                    {% comment %} <img src="{{ category.cover }}" alt="{{ category.name }}"> {% endcomment %}
+                    {% block map%}
+
+
+                    {% endblock }
                     <h3><a href="basij.html"> {{ category.name }} </a></h3>
-                </div>
-                {% comment %} <button onclick="fun()"></button> {% endcomment %}
+                 </div>
+                 {% comment %} <button onclick="fun()"></button> {% endcomment %}
+                 
+                 {% for post in post_data %}
+                     {% if post.category.name == category.name %}
+                      <div>
+                         <h2 style="direction:rtl;">{{ post.title}}<br></h2>
+                         <img src="{{post.cover}}" style="height:200px;width:200px;"><br>
                 
-                {% for post in post_data %}
-                {% if post.category.name == category.name %}
-                <div>
-               <h2 style="direction:rtl;">{{ post.title}}<br></h2>
-                <img src="{{post.cover}}" style="height:200px;width:200px;"><br>
-                
-                <div style="direction:rtl;">{{post.description}}</div>
-                </div>
-                {{ "<!--" }}
-                {% endif %}
-                {% endfor %}
-                {{ "-->" }}
+                         <div style="direction:rtl;">{{post.description}}</div>
+                     </div>
+                     {{ "<!--" }}
+                     {% endif %}
+                 {% endfor %}
+                 {{ "-->" }}
 
 
             </div>

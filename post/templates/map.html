@@ -1,23 +1,17 @@
-{% load static %}
+{% extends "index.html" %}
+ {% block map%}
 
-<!doctype html>
-<html lang="en">
-  <head>
+   {% load static %}
+
     <link rel="stylesheet" href="{% static 'styles/map.css'%}" type="text/css">
     <style>
       .map {
         height: 400px;
-        width: 100%;
+        width: 400px;
       }
     </style>
     <script src="{% static 'scripts/map2.js' %}"></script>
-    <title>OpenLayers example</title>
-  </head>
-  <body>
-    <h2>My Map</h2>
     <div id="map" class="map"></div>
-    <script type="text/javascript" src="{% static 'scripts/map.js' %}">
-     
-    </script>
-  </body>
-</html>
+    <script type="text/javascript" src="{% static 'scripts/map.js' %}"></script>
+
+ {% endblock %}
